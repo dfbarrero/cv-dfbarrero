@@ -56,6 +56,7 @@
 \addbibresource{cvbchthesis.bib} % Include your bibtex projects file here. Format: fileName.bib
 \addbibresource{cvcourses.bib} % Include your bibtex projects file here. Format: fileName.bib
 \addbibresource{cvgrants.bib} % Include your bibtex projects file here. Format: fileName.bib
+\addbibresource{cvothers.bib} % Include your bibtex projects file here. Format: fileName.bib
 
 
 \input{biblatex_modifications/standard_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
@@ -63,6 +64,7 @@
 \input{biblatex_modifications/bchthesis_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
 \input{biblatex_modifications/course_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
 \input{biblatex_modifications/grant_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
+\input{biblatex_modifications/other_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
 
 %-------------------Defining a CV Reference column style and a CV reference entry block-------------------
 
@@ -102,7 +104,7 @@
 \phone[fixed]{+34~91~885~6920}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 %\email{john@doe.org}                               % optional, remove / comment the line if not wanted
-\homepage{atc1.aut.uah.es/\~david}                         % optional, remove / comment the line if not wanted
+\homepage{https://atc1.aut.uah.es/\~{ }david}                         % optional, remove / comment the line if not wanted
 \extrainfo{Profesor Titular de Universidad}                 % optional, remove / comment the line if not wanted
 \photo[64pt][0.4pt]{images/dfbarrero.jpg}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file stored
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
@@ -148,30 +150,6 @@
 \cvitem{Calification}{Excellent \textit{cum laudem} (10)}
 %\cvitem{description}{Short thesis abstract}
 
-%-------------------Masters Thesis Section--------------------------------------------------------------
-
-%\section{Master thesis}
-
-% Format:  \cvitem{Section Name}{Description}
-% Example: \cvitem{title}{\emph{The title of my Masters goes here}}
-% Example: \cvitem{supervisors}{My supervisors' names go here}
-% Example: \cvitem{description}{Short thesis abstract}
-
-%\cvitem{title}{\emph{The title of my Masters goes here}}
-%\cvitem{supervisors}{My supervisors' names go here}
-%\cvitem{description}{Short thesis abstract}
-
-%-------------------Languages Section-------------------------------------------------------------------
-
-\section{Languages}
-
-% Format:  \cvitemwithcomment{Language}{Skill level}{Comment}
-% Example: \cvitemwithcomment{English}{Native}{Mother Tongue}
-% Example: \cvitemwithcomment{French}{Fluent}{Daily practice, all work performed in English}
-
-\cvitemwithcomment{Spanish}{Native}{}
-\cvitemwithcomment{English}{Fluent}{}
-\cvitemwithcomment{French}{Elemental}{}
 
 %-------------------Interests Section-------------------------------------------------------------------
 
@@ -205,12 +183,12 @@
 %      \item Did some more administrating
 %   \end{itemize}}
 
-\tlcventry{2012}{0}{Associate professor}{Universidad de Alcalá}{Madrid}{Spain}{Associate Professor.\newline{}%
+\tlcventry{2012}{0}{Associate professor}{Universidad de Alcalá}{Madrid}{Spain}{Associate Professor.\newline{}
 Main duties:%
 \begin{itemize}%
  \item Teach Robotics, Intelligent Systems, Videogames Programming;
  \item Research on Evolutionary Computation and Machine Learning;
- \item Management duties;
+ \item Management;
 \end{itemize}}
 
 \tlcventry{2006}{2012}{Lecturer}{Universidad de Alcalá}{Alcalá de Henares, Madrid}{Spain}{Lecturer.\newline{}%
@@ -298,13 +276,21 @@ Main Duties:%
 \cvdoubleitem{\textbf{Operating Systems}}{Ubuntu, Debian, Windows}{\textbf{Web}}{Apache, Tomcat}
 \cvdoubleitem{\textbf{Mail}}{Postfix, Cyrus, ClamAV}{\textbf{Virtualization}}{Virtual Box, VMWare}
 
-
 \subsection{Office tools}
 \cvdoubleitem{\textbf{Office}}{OpenOffice, MS Office}{\textbf{Other}}{\LaTeX, Ti\textit{k}Z, Bibtex, Markdown}
 
 \input{cvitem_modifications/cvitem_modified}        % Removing forced punctuation from cvitem
 
 \nocite{*}                                          % Print all publications.
+
+\pagebreak
+
+\section{Languages}
+
+\cvitemwithcomment{Spanish}{Native}{}
+\cvitemwithcomment{English}{Fluent}{}
+\cvitemwithcomment{French}{Elemental}{}
+
 \section{Training}
 
 \subsection{Technical training}
@@ -333,10 +319,58 @@ Main Duties:%
 
 \subsection{Teaching management}
 
-TODO
+\printbibliography[type=other, keyword={teachingmanagement}, heading=none]
 
 \input{cvitem_modifications/cvitem_moderncvclassic} % Reverting changes to cvitem.
-\vspace{-0.5cm}
+
+\subsection{Educational and cooperation stays}
+
+\tldatecventry{2017}{Universidad Nacional Autónoma de Nicaragua - Managua}{Facultad de Ciencia e Ingeniería}{Managua, Nicaragua}{two weeks}{Initial contact to define and plan a collaboration program. Instruction in research and different topics related to AI:%
+\begin{itemize}%
+\item Machine Learning;
+\item Research communication skills;
+\end{itemize}}
+
+\tldatecventry{2012}{Universidad Nacional Autónoma de Nicaragua - León}{Facultad de Ciencia y Tecnología}{León, Nicaragua}{two months}{Instruction in research and different topics related to AI:%
+\begin{itemize}%
+\item Evolutionary Algorithms;
+\item Machine Learning;
+\item Research communication skills;
+\end{itemize}}
+
+\tldatecventry{2010}{Bluefields Indial and Caribbean University (BICU)}{}{Bluefields, Nicaragua}{three weeks}{Teachers instruction in Operating Systems.}
+
+\tldatecventry{2007}{Universidad Nacional Autónoma de Nicaragua - León}{Facultad de Ciencia y Tecnología}{León, Nicaragua}{two months}{Support duties for the División de Informática (IT Department) in UNAN-León.}
+
+\tldatecventry{2006}{Universidad Nacional Autónoma de Nicaragua - León}{Facultad de Ciencia y Tecnología}{León, Nicaragua}{two months}{Teachers instruction in Operating Systems.}
+
+\subsection{Other teaching merits}
+
+\cvlistitem{Three ``trienios'' recognized.}
+
+\cvlistitem{Coordinator of the teaching innovation group \textit{Inteligencia Artificial para el Aprendizaje. From 2013.}}
+
+\cvlistitem{Member of the teaching innovation group \textit{Mentoring, Coaching y Mundos Virtuales}. From 2012 to 2013.}
+
+\cvlistitem{Tutorship in the program Tutorías Académicas Personalizadas for students enroled in Grado de Ingeniería de Computadores, Escuela Politécnica Superior. 2014.}
+
+\cvlistitem{Positive evaluation given by the \textit{Agencia Nacional de Evaluación de la Calidad y Acreditación (ANECA)} for the position \textit{Profesor Titular de Universidad}. 2014.}
+
+\cvlistitem{Positive evaluation given by the \textit{Agencia Nacional de Evaluación de la Calidad y Acreditación (ANECA)} for the position \textit{Profesor Contratado Doctor}. 2013.}
+
+\cvlistitem{Positive evaluation given by the \textit{Agencia Nacional de Evaluación de la Calidad y Acreditación (ANECA)} for the position \textit{Profesor de Universidad Privada}. 2013.}
+
+\cvlistitem{Positive evaluation given by the \textit{Agencia Nacional de Evaluación de la Calidad y Acreditación (ANECA)} for the position \textit{Profesor Ayudante Doctor}. 2013.}
+
+\cvlistitem{Positive evaluation given by the \textit{Agencia de Calidad, Acreditación y Prospectiva de las Universidades de Madrid (ACAP)} for the position \textit{Profesor Contratado Doctor}. 2012.}
+
+\cvlistitem{Positive evaluation given by the \textit{Agencia de Calidad, Acreditación y Prospectiva de las Universidades de Madrid (ACAP)} for the position \textit{Profesor de Universidad Privada}. 2012.}
+
+\cvlistitem{Positive evaluation given by the \textit{Agencia de Calidad, Acreditación y Prospectiva de las Universidades de Madrid (ACAP)} for the position \textit{Profesor Ayudante Doctor}. 2013.}
+
+\cvlistitem{Coordinator of the Personal Tutorship Program along the course 2012/13 for Grado de Ingeniería Informática.}
+
+\cvlistitem{Participation in the Personal Tutorship Program along the course 2013/14 for Grado de Ingeniería en Computadores.}
 
 
 
@@ -355,34 +389,44 @@ TODO
 % Example: \printbibliography[type=thesis,title={Thesis}]
 
 \printbibliography[type=article,title={Journal Publications}]
-\printbibliography[type=inproceedings,title={Conference Publications}]
-\printbibliography[type=inchapter,title={Others}]
+\defbibfilter{conferences}{
+      type=inproceedings or
+      type=incollection
+}
+\printbibliography[filter=conferences,title={Conference Publications}]
+\defbibfilter{books}{
+      type=book or
+      type=inbook or
+      type=misc
+}
+\printbibliography[filter=books, title={Books and books chapters}]
 \printbibliography[type=thesis,keyword={supervised},title={Supervised Thesis}]
 
-\input{cvitem_modifications/cvitem_moderncvclassic} % Reverting changes to cvitem.
+\section{Projects}
 
-%-------------------Projects Section----------------------------------------------------------------
-% The cvitem commands needs to be altered to correctly print all projects with the moderntime package.
-% The cvitem command is edited to remove all forced punctuation within the command.
-% All the typesetting of the text is handled by the modified Biblatex style.
-
-\input{cvitem_modifications/cvitem_modified}        % Removing forced punctuation from cvitem
-
-\nocite{*}                                          % Print all publications.
-
-% Format:  \printbibliography[type=Biblatex type,title={Title of publication}]
-% Example: \printbibliography[type=article,title={Journal Publications}]
-% Example: \printbibliography[type=inproceedings,title={Conference Publications}]
-% Example: \printbibliography[type=thesis,title={Thesis}]
-
-\printbibliography[type=project,keyword={project},title={Competitive projects}]
-\printbibliography[type=project,keyword={contract},title={Research contracts}]
+\subsection{Competitive projects}
+\printbibliography[heading=subbibliography,type=project,keyword={project},heading=none]
+\subsection{Research contracts}
+\printbibliography[heading=subbibliography,type=project,keyword={contract},heading=none]
 
 \printbibliography[type=grant,title={Grants}]
 
 \section{Research management}
 
+\printbibliography[type=other, keyword=rdmanagement, heading=none]
+
 \input{cvitem_modifications/cvitem_moderncvclassic} % Reverting changes to cvitem.
+
+\section{Knowledge transfer}
+
+\subsection{Patents}
+
+\cvlistitem{\textit{Multi-Dimensional Subjective Human Interaction Proof}. US 62/329,995. 29/04/2016.}
+
+\subsection{Entrepreneurship}
+
+\cvlistitem{Founder and partner of \textit{Red Social NovaGob, S.L.}, a spin-off of the Universidad Autónoma de Madrid. The enterprise is dedicated to create a vertical social network for civil servants in the latin-hispanic area and provide high-level consulting to the public sector.}
+
 
 
 
@@ -390,13 +434,15 @@ TODO
 
 \section{Achievements}
 
-% Format:  \cvlistitem{Achievement}
-% Example: \cvlistitem{Received best student award}
-% Example: \cvlistitem{Another achievement. This achievement is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+\cvlistitem{Awarded with the \textbf{second prize} (\textit{accésit}) in the 8th edition of the Award for Innovative Ideas of the Universidad de Alcalá to the proposal entitled ``Lares Robotics Solutions: Sistema de teleasistencia avanzada no intrusivo''. 2015.}
 
-\cvlistitem{Received best student award}
-\cvlistitem{Another achievement. This achievement is particularly long and therefore normally spans over several lines. Did you notice the indentation when the line wraps?}
+\cvlistitem{\textbf{Best paper award} in the 2014 International Conference on Emerging Security Technologies Conference (EST 2014). 2014.}
 
+\cvlistitem{Awarded with the \textbf{second prize} (\textit{accésit}) in the category of Social Sciences of the CIADE (\textit{Centro de Iniciativas Emprendedoras de la Universidad Autónoma de Madrid}) award for innovative initiatives. 2014.}
+
+\cvlistitem{Awarded with the \textbf{second prize} of the \textit{Nuevas Aplicaciones para Internet} given by the \textit{Cátedra Telefónica para Internet de Nueva Generación} in the UPM for the proposal entitled \textit{Searchy: Un sistema distribuido para la Gestión del Conocimiento}. 2004.}
+
+\cvlistitem{Technical coordinator of the book \textit{Construyendo la Administración Electrónica (e-Administración) local. Las tecnologías de la información y la comunicación en los ayuntamientos de la Comunidad de Madrid}, awarded with \textbf{Mención Especial (única)} in \textit{III Premio Fermín Abella y Blave para trabajos de investigación sobre la reforma administrativa en la Administración Local}, given by the \textit{Instituto Nacional de la Administración Pública}, \textit{Ministerio de Administraciones Públicas}, Spain, 2004.}
 
 
 %-------------------References Section------------------------------------------------------------------
