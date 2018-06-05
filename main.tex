@@ -151,16 +151,55 @@
 %\cvitem{description}{Short thesis abstract}
 
 
-%-------------------Interests Section-------------------------------------------------------------------
+%-------------------Skills Matrix Section----------------------------------------------------------------
 
-%\section{Interests}
+\section{Skills}
 
-% Format:  \cvitem{Hobby}{Description}
-% Example: \cvitem{Gaming}{Computer Games}
-% Example: \cvitem{Sport}{Golf, Tennis}
+% For items with categories: 
+% Format:  \cvdoubleitem{Category}{List of skills}{Category Name}{List of skills}
+% Note: It looks better if the category is bold with \textbf{}
+% Example:
+% \subsection{Development}
+% \cvdoubleitem{\textbf{Languages}}{C\#, C\+\+, Java}{\textbf{Databases}}{MSSQL, MySQL}
+%
+% For a bullet list without categories:
+% Format:  \cvlistdoubleitem{Skill 1}{Skill 2}
+% Example: 
+% \subsection{Development}
+% \cvlistdoubleitem{C\#, Java, Ruby}{MSSQL, MySQL}
+% \cvlistdoubleitem{Photoshop}{Windows, Linux. In the single column list, this item is particularly long to wrap over several lines.}
 
-%\cvitem{Gaming}{Computer Games}
-%\cvitem{Sport}{Golf, Tennis}
+\subsection{Development}
+\cvdoubleitem{\textbf{Languages}}{C, C++, Java, R, Python, JavaScript, Shell/Bash, PHP}{\textbf{Web}}{HTML/XHTML, Jquery, Ajax, Bootstrap, CSS, Jekyll, Elgg}
+\cvdoubleitem{\textbf{Formats}}{XML, YAML, JSON}{\textbf{Databases}}{MySQL}
+\cvdoubleitem{\textbf{VCS}}{SVN, Git}{\textbf{Tools}}{GitHub, Redmine}
+
+
+\subsection{Artificial Intelligence}
+\cvdoubleitem{\textbf{Optimization}}{Metaheuristics, multiobjective optimization}{\textbf{EAs}}{Genetic Algorithms, Genetic Programming, Evolution Strategies}
+\cvdoubleitem{\textbf{Robotics}}{ROS}{\textbf{Tools}}{ECJ, Weka, Inspyred, PyBrain}
+\cvdoubleitem{\textbf{ML}}{Artificial Neural Networks, classification, clustering, feature selection}{\textbf{}}{}
+
+\subsection{Systems Administration}
+\cvdoubleitem{\textbf{Operating Systems}}{Ubuntu, Debian, Windows}{\textbf{Web}}{Apache, Tomcat}
+\cvdoubleitem{\textbf{Mail}}{Postfix, Cyrus, ClamAV}{\textbf{Virtualization}}{Virtual Box, VMWare}
+
+\subsection{Office tools}
+\cvdoubleitem{\textbf{Office}}{OpenOffice, MS Office}{\textbf{Other}}{\LaTeX, Ti\textit{k}Z, Bibtex, Markdown}
+
+\input{cvitem_modifications/cvitem_modified}        % Removing forced punctuation from cvitem
+
+\nocite{*}                                          % Print all publications.
+
+\pagebreak
+
+\section{Languages}
+
+\cvitemwithcomment{Spanish}{Native}{}
+\cvitemwithcomment{English}{Fluent}{}
+\cvitemwithcomment{French}{Elemental}{}
+
+
 
 %-------------------Experience Section------------------------------------------------------------------
 
@@ -227,69 +266,20 @@ Main Duties:%
  \item Research on Machine Learning applied to the study of randomness tests independence;
 \end{itemize}}
 
-\tlcventry{2011}{2012}{Postdoc researcher}{NASA Jet Propulsion Laboratory}{Pasadena, CA, USA}{}{Stage with duties in system administration.\newline{}%
+\tlcventry{2012}{2013}{Postdoc researcher}{NASA Jet Propulsion Laboratory}{Pasadena, CA, USA}{}{Stage with duties in system administration.\newline{}%
 Main Duties:%
 \begin{itemize}%
  \item Research on human-multirobot interaction;
  \item Research on Brain Computer Interfaces;
 \end{itemize}}
 
-\tlcventry{2016}{2016}{Visiter researcher}{University of Portsmouth}{Postsmouth, UK}{}{Stage with duties in system administration.\newline{}%
+\tlcventry{2011}{2011}{Visiter researcher}{University of Portsmouth}{Postsmouth, UK}{}{Stage with duties in system administration.\newline{}%
 Main Duties:%
 \begin{itemize}%
  \item Research on Cryptoanalysis of lightweight authentication protocols;
  \item Research on performance assessment of Evolutionary Algorithms;
 \end{itemize}}
 
-
-
-%-------------------Skills Matrix Section----------------------------------------------------------------
-
-\section{Skills}
-
-% For items with categories: 
-% Format:  \cvdoubleitem{Category}{List of skills}{Category Name}{List of skills}
-% Note: It looks better if the category is bold with \textbf{}
-% Example:
-% \subsection{Development}
-% \cvdoubleitem{\textbf{Languages}}{C\#, C\+\+, Java}{\textbf{Databases}}{MSSQL, MySQL}
-%
-% For a bullet list without categories:
-% Format:  \cvlistdoubleitem{Skill 1}{Skill 2}
-% Example: 
-% \subsection{Development}
-% \cvlistdoubleitem{C\#, Java, Ruby}{MSSQL, MySQL}
-% \cvlistdoubleitem{Photoshop}{Windows, Linux. In the single column list, this item is particularly long to wrap over several lines.}
-
-\subsection{Development}
-\cvdoubleitem{\textbf{Languages}}{C, C++, Java, R, Python, JavaScript, Shell/Bash, PHP}{\textbf{Web}}{HTML/XHTML, Jquery, Ajax, Bootstrap, CSS, Jekyll, Elgg}
-\cvdoubleitem{\textbf{Formats}}{XML, YAML, JSON}{\textbf{Databases}}{MySQL}
-\cvdoubleitem{\textbf{VCS}}{SVN, Git}{\textbf{Tools}}{GitHub, Redmine}
-
-
-\subsection{Artificial Intelligence}
-\cvdoubleitem{\textbf{Optimization}}{Metaheuristics, multiobjective optimization}{\textbf{EAs}}{Genetic Algorithms, Genetic Programming, Evolution Strategies}
-\cvdoubleitem{\textbf{Robotics}}{ROS}{\textbf{Tools}}{ECJ, Weka, Inspyred, PyBrain}
-\cvdoubleitem{\textbf{ML}}{Artificial Neural Networks, classification, clustering, feature selection}{\textbf{}}{}
-
-\subsection{Systems Administration}
-\cvdoubleitem{\textbf{Operating Systems}}{Ubuntu, Debian, Windows}{\textbf{Web}}{Apache, Tomcat}
-\cvdoubleitem{\textbf{Mail}}{Postfix, Cyrus, ClamAV}{\textbf{Virtualization}}{Virtual Box, VMWare}
-
-\subsection{Office tools}
-\cvdoubleitem{\textbf{Office}}{OpenOffice, MS Office}{\textbf{Other}}{\LaTeX, Ti\textit{k}Z, Bibtex, Markdown}
-
-\input{cvitem_modifications/cvitem_modified}        % Removing forced punctuation from cvitem
-
-\nocite{*}                                          % Print all publications.
-
-\pagebreak
-
-\section{Languages}
-
-\cvitemwithcomment{Spanish}{Native}{}
-\cvitemwithcomment{English}{Fluent}{}
-\cvitemwithcomment{French}{Elemental}{}
 
 \section{Training}
 
