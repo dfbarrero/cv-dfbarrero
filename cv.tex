@@ -57,7 +57,7 @@
 \addbibresource{cvcourses.bib} % Include your bibtex projects file here. Format: fileName.bib
 \addbibresource{cvgrants.bib} % Include your bibtex projects file here. Format: fileName.bib
 \addbibresource{cvothers.bib} % Include your bibtex projects file here. Format: fileName.bib
-\addbibresource{cvstays.bib} % Include your bibtex projects file here. Format: fileName.bib
+\addbibresource{cvvisits.bib} % Include your bibtex projects file here. Format: fileName.bib
 
 
 \input{biblatex_modifications/standard_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
@@ -66,7 +66,7 @@
 \input{biblatex_modifications/course_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
 \input{biblatex_modifications/grant_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
 \input{biblatex_modifications/other_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
-\input{biblatex_modifications/stay_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
+\input{biblatex_modifications/visit_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
 
 %-------------------Defining a CV Reference column style and a CV reference entry block-------------------
 
@@ -254,7 +254,7 @@ Main duties:%
  \item Modelization of antennas with axial symmetry;
 \end{itemize}}
 
-\tlcventry{1999}{1999}{Self-employed teacher}{}{Alcalá de Henares, Madrid}{Spain}{Instructor in specialization courses for the unemployed.\newline{}%
+\tlcventry{1999}{1999}{Self-employed instructor}{}{Alcalá de Henares, Madrid}{Spain}{Instructor in specialization courses for the unemployed.\newline{}%
 Main Duties:%
 \begin{itemize}%
  \item Instruct web design, HTML and JavaScript;
@@ -289,14 +289,15 @@ Main Duties:%
 
 \newpage
 
-\printbibliography[type=thesis,keyword={supervised},title={Supervised thesis}]
 
 \section{Projects}
 
 \subsection{Competitive projects}
 \printbibliography[heading=subbibliography,type=project,keyword={project},heading=none]
-\subsection{Research contracts}
+\subsection{Research contracts with industry}
 \printbibliography[heading=subbibliography,type=project,keyword={contract},heading=none]
+
+\printbibliography[type=thesis,keyword={supervised},title={Supervised thesis}]
 
 \section{Training}
 
@@ -311,7 +312,7 @@ Main Duties:%
 \subsection{Other training}
 \printbibliography[type=course, keyword={othertraining}, heading=none]
 
-\section{Teaching}
+\section{Teaching experience}
 
 \subsection{Graduate and postgraduate courses}
 \printbibliography[type=course, keyword={official}, heading=none]
@@ -361,15 +362,15 @@ Main Duties:%
 \input{cvitem_modifications/cvitem_modified}        % Removing forced punctuation from cvitem
 \nocite{*}                                          % Print all publications.
 
-\section{Stays}
+\section{Visits}
 
-\subsection{Research stays}
+\subsection{Research visits}
 
-\printbibliography[type=stay, keyword=research, heading=none]
+\printbibliography[type=visit, keyword=research, heading=none]
 
-\subsection{Educational and cooperation stays}
+\subsection{Educational and cooperation visits}
 
-\printbibliography[type=stay, keyword=education, heading=none]
+\printbibliography[type=visit, keyword=education, heading=none]
 
 \section{Management}
 
