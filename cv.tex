@@ -57,6 +57,7 @@
 \addbibresource{cvcourses.bib} % Include your bibtex projects file here. Format: fileName.bib
 \addbibresource{cvgrants.bib} % Include your bibtex projects file here. Format: fileName.bib
 \addbibresource{cvothers.bib} % Include your bibtex projects file here. Format: fileName.bib
+\addbibresource{cvstays.bib} % Include your bibtex projects file here. Format: fileName.bib
 
 
 \input{biblatex_modifications/standard_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
@@ -65,6 +66,7 @@
 \input{biblatex_modifications/course_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
 \input{biblatex_modifications/grant_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
 \input{biblatex_modifications/other_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
+\input{biblatex_modifications/stay_modification.tex}        % Modifying the default standard.tex style of Biblatex. This modification is performed to include the moderntimeline package.
 
 %-------------------Defining a CV Reference column style and a CV reference entry block-------------------
 
@@ -272,19 +274,22 @@ Main Duties:%
 % Example: \printbibliography[type=inproceedings,title={Conference Publications}]
 % Example: \printbibliography[type=thesis,title={Thesis}]
 
-\printbibliography[type=article,title={Journal Publications}]
+\printbibliography[type=article,title={Journal publications}]
 \defbibfilter{conferences}{
       type=inproceedings or
       type=incollection
 }
-\printbibliography[filter=conferences,title={Conference Publications}]
+\printbibliography[filter=conferences,title={Conference publications}]
 \defbibfilter{books}{
       type=book or
       type=inbook or
       type=misc
 }
 \printbibliography[filter=books, title={Books and books chapters}]
-\printbibliography[type=thesis,keyword={supervised},title={Supervised Thesis}]
+
+\newpage
+
+\printbibliography[type=thesis,keyword={supervised},title={Supervised thesis}]
 
 \section{Projects}
 
@@ -297,6 +302,8 @@ Main Duties:%
 
 \subsection{Technical training}
 \printbibliography[type=course, keyword={techtraining}, heading=none]
+
+\newpage
 
 \subsection{Teaching training}
 \printbibliography[type=course, keyword={edutraining}, heading=none]
@@ -351,48 +358,26 @@ Main Duties:%
 
 \cvlistitem{Barrero, David F.; R-Moreno, María D.; Muñoz, Pablo y Camacho, David. \textit{La heterogeneidad en el aula como fortaleza: Aprendizaje Basado en Proyectos con Videojuegos}. In XX Congreso Internacional de Tecnologías para la Educación y el Conocimiento y VII Pizarra Digital: Diversidad, Estrategias y Tecnologías, Diálogo Entre Culturas (InterESTRATIC 2015). Madrid, Spain. 2015.}
 
+\input{cvitem_modifications/cvitem_modified}        % Removing forced punctuation from cvitem
+\nocite{*}                                          % Print all publications.
+
 \section{Stays}
 
 \subsection{Research stays}
 
-\tlcventry{2016}{2016}{Postdoc researcher}{University of Kent}{Canterbury, UK}{two months.}{Research on Machine Learning applied to the study of randomness battery tests independence.}
-
-\tlcventry{2012}{2013}{Postdoc researcher}{NASA Jet Propulsion Laboratory}{Pasadena, CA, USA}{two months.}{Research on human-multirobot interaction and Brain-Computer Interfaces.}
-
-\tlcventry{2011}{2011}{Visiter researcher}{University of Portsmouth}{Postsmouth, UK}{two months.}{Research on Cryptoanalysis of lightweight authentication protocols and performance assessment of Evolutionary Algorithms.}
-
+\printbibliography[type=stay, keyword=research, heading=none]
 
 \subsection{Educational and cooperation stays}
 
-\tlcventry{2017}{2017}{Universidad Nacional Autónoma de Nicaragua - Managua}{Facultad de Ciencia e Ingeniería}{Managua, Nicaragua}{two weeks}{Initial contact to define and plan a collaboration program. Instruction in research and different topics related to AI:%
-\begin{itemize}%
-\item Machine Learning;
-\item Research communication skills;
-\end{itemize}}
-
-\tldatecventry{2012}{Universidad Nacional Autónoma de Nicaragua - León}{Facultad de Ciencia y Tecnología}{León, Nicaragua}{two months}{Instruction in research and different topics related to AI:%
-\begin{itemize}%
-\item Evolutionary Algorithms;
-\item Machine Learning;
-\item Research communication skills;
-\end{itemize}}
-
-\tldatecventry{2010}{Bluefields Indian and Caribbean University (BICU)}{}{Bluefields, Nicaragua}{three weeks}{Teachers instruction in Operating Systems.}
-
-\tldatecventry{2007}{Universidad Nacional Autónoma de Nicaragua - León}{Facultad de Ciencia y Tecnología}{León, Nicaragua}{two months}{Support duties for the División de Informática (IT Department) in UNAN-León.}
-
-\tldatecventry{2006}{Universidad Nacional Autónoma de Nicaragua - León}{Facultad de Ciencia y Tecnología}{León, Nicaragua}{two months}{Teachers instruction in Operating Systems.}
-
-
-
-\input{cvitem_modifications/cvitem_modified}        % Removing forced punctuation from cvitem
-\nocite{*}                                          % Print all publications.
+\printbibliography[type=stay, keyword=education, heading=none]
 
 \section{Management}
 
 \subsection{Research management}
 
 \printbibliography[type=other, keyword=rdmanagement, heading=none]
+
+\newpage
 
 \subsection{University management}
 
